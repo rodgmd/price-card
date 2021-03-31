@@ -1,0 +1,146 @@
+body {
+    background-color: #4e4e4e;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.price-card {
+    margin-top: 30px;
+    width: 260px;
+    font-family: 'Segoe UI';
+    background-color: #4e4e4e;
+}
+
+.price-card-header {
+    position: relative;
+    background: #df0050;
+    color: white;
+    padding: 15px 25px;
+    z-index: 1;
+    border-radius: 20px;
+}
+
+.price-card-title {
+    position: relative;
+    font-size: 35px;
+    font-weight: 800;
+    margin: 0;
+}
+
+.price-card-title + p {
+    position: relative;
+}
+
+p {
+    text-align: justify;
+    font-size: 10px;
+}
+
+.price-card-body {
+    position: relative;
+    color: gray;
+    background-color: white;
+    z-index: 0;
+}
+
+.price-card-body p {
+    margin-top: 0px;
+    padding: 70px 25px 5px 25px;
+}
+
+.price-card-body::before {
+    position: absolute;
+    content: "";
+    top: -70px;
+    left: 0px;
+    width: 150px;
+    height: 95px;
+    background-color: #df0050;
+    z-index: 1;
+    transform: skewY(13deg);
+    border-bottom-right-radius: 27px;
+}
+
+.price-card-body::after {
+    position: absolute;
+    content: "";
+    top: -70px;
+    right: 0px;
+    width: 150px;
+    height: 95px;
+    background-color: #df0050;
+    z-index: 0;
+    transform: skewY(-13deg);
+    border-radius: 0px 0px 0px 27px;
+    box-shadow: 0px 12px 30px -5px rgba(0,0,0,.45);
+}
+
+ul {
+    margin-bottom: 0px;
+    padding-top: 0px;
+    margin-left: -5px;
+}
+
+ul li:before {
+    position: relative;
+    content: url(list-style-x-bullet.png);
+    left: -10px;
+    top: 8px;
+}
+
+#first-bullet:before {
+    position: relative;
+    content: url(list-style-checked-bullet.png);
+    left: -5px;
+    margin-left: -8px;
+}
+
+.price-card-body li {
+    text-transform: uppercase;
+    font-size: 14px;
+    line-height: 35px;
+    list-style: none;
+}
+
+.price-card-footer {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    border-radius: 0px 0px 20px 20px;
+    background-color: white;
+}
+
+.price-card-price {
+    font-weight: 800;
+    font-size: 14px;
+    color: black;
+}
+
+.price-card-button {
+    font-weight: 800;
+    color: white;
+    background-color: #4e4e4e;
+    padding: 8px 16px;
+    font-size: 12px;
+    border: none;
+}
+
+.img-box {
+    padding: 0;
+    margin-top: 20px;
+}
+
+ @media (max-width: 576px) {
+    .container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}
